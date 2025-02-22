@@ -1,0 +1,206 @@
+/* Global */
+:root{
+     --background-body: rgb(12, 13, 27);
+     --color-white: rgb(240, 240, 240);
+
+     --button-bkg-green: rgb(33, 216, 33);
+     --dropshadow-green: rgb(117, 255, 63);
+     --boxshadow-green: rgb(111, 255, 106);
+
+     --button-bkg-red: rgb(197, 33, 74);
+     --dropshadow-red: rgb(255, 63, 153);
+     --boxshadow-red: rgb(255, 0, 0);
+
+     --bkg-container-list: rgb(23, 24, 48);
+     --boxshadow-container-list: rgb(50, 49, 83);
+
+     --input-grey-color: rgb(41, 36, 36);
+     --border-input-color: rgb(200, 200, 200);
+     --cornflowerblue-color: rgb(100, 149, 237);
+}
+
+body{
+     background-color: var(--background-body);
+     padding: 0; margin: 0;
+     color: var(--color-white);
+     box-sizing: border-box;
+}
+
+/*Container - App.js*/
+.container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/* TodoForm */
+.container-todo-form{
+     display: flex;
+     justify-content: center;
+}
+
+.single-input{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+     position: relative;
+}
+
+.single-input label{
+     font-size: 16px;
+     position: absolute;
+     left: 20px;
+     bottom: 15px;
+     color: var(--input-grey-color);
+     cursor: text;
+     transition: 0.5s ease-in-out;
+     pointer-events: none;
+}
+
+.todoform-input-text{
+     background-color: var(--background-body);
+     margin: 10px;
+     padding: 5px;
+     color: var(--color-white);
+     border: none;
+     border-bottom: 1px solid var(--border-input-color);
+     outline: 0;
+}
+
+.todoform-input-text:focus, 
+.todoform-input-text:valid{
+     border-bottom: 1px solid var(--border-input-color);
+}
+
+.todoform-input-text:focus ~ label, 
+.todoform-input-text:not(:placeholder-shown) ~ label{
+     transform: translateY(-18px);
+     font-size: 12px;
+     color: var(--color-white);
+}
+
+.title-label{
+     font-size: 24px;
+}
+
+/* todolist */
+.ul-todo-list{
+     margin: 0; padding: 0;
+}
+
+.container-list{
+     display: flex;
+     justify-content: space-around;
+     justify-items: center;
+     align-items: center;
+     background-color: var(--bkg-container-list);
+     padding: 15px 0px 15px 0;
+     border-radius: 5px;
+     margin: 5px;
+     border: .1px solid var(--boxshadow-container-list);
+}
+
+.container-list li{
+     list-style: none;
+}
+
+.custom-checkbox{
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+}
+
+.custom-checkbox input{
+     display: none;
+}
+
+.custom-checkbox .checkmark{
+     width: 20px;
+     height: 20px;
+     border: .5px solid rgb(17, 17, 17);
+     border-radius: 5px;
+     display: inline-block;
+     background: rgb(238, 238, 238);
+     background-size: 50px;
+     transition: background-size .1s ease;
+}
+
+.custom-checkbox input:checked + .checkmark{
+     background: rgb(17, 17, 17) url(../assets/checkmark.svg) center/60% no-repeat;
+}
+
+/*Deixando botão na forma*/
+.btn-form{
+     color: var(--color-white);
+     border: none;
+     padding: 7px 10px;
+     display: inline-block;
+     font-size: 14px;
+     letter-spacing: 1px;
+     cursor: pointer;
+     border-radius: 5px;
+     -webkit-transition: ease-out .5s;
+     -moz-transition: ease-out .5s;
+     transition: ease-out .6s;
+}
+
+/*Botão cores e estilizações*/
+.btn-green{
+     margin-left: 5px;
+     box-shadow: inset 0 var(--boxshadow-green);
+     background-color: var(--button-bkg-green);
+}
+
+.btn-green:hover{
+     box-shadow: inset 400px 0 0 0 var(--boxshadow-green);
+     filter: drop-shadow(0 0 0.15rem var(--dropshadow-green));
+}
+
+.btn-red{
+     box-shadow: inset 0 var(--boxshadow-red);
+     background-color: var(--button-bkg-red);
+}
+
+.btn-red:hover {
+     box-shadow: inset 400px 0 0 0 var(--boxshadow-red);
+     filter: drop-shadow(0 0 0.25rem var(--dropshadow-red));
+   }
+
+
+/*Reponsividade */
+   @media(max-width: 768px){
+     .title-label{
+          font-size: 20px;
+     }
+
+     .single-input label{
+          left: 16px;
+     }
+
+     /*Retirando Hover dos botões*/
+     .btn-green:hover{
+          box-shadow: none;
+          filter: none;
+     }
+     
+     .btn-red:hover{
+          box-shadow: none;
+          filter: none;
+     }
+
+     /* Editando button */
+     .btn-red{
+          background-color: var(--boxshadow-red);
+     }
+   }
+
+
+/* Home */
+
+/* Not Found */
+
+/* Todo Form */
+
+/* Todo List */
+
