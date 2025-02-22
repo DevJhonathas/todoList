@@ -32,3 +32,5 @@ O projeto segue uma organização clara para facilitar a manutenção:
 - `utils/` - Contém funções auxiliares, como adicionar e remover elementos.
 - `NotFound.js` - Página de erro 404 para rotas inexistentes.
 
+![Adding Item](./img/AddingItem.png)
+![After Add Item](./img/afterAddItem.png)
