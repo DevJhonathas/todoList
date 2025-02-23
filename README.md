@@ -1,4 +1,4 @@
-# Mini Documentação do Projeto React
+# Documentação do Projeto To Do
 
 ## Ferramentas Utilizadas no ReactJS
 
